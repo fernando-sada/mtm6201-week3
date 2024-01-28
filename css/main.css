@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: white;
   margin: 0;  
-  line-height: 1.6rem; /*Line height increased for better readibility*/
+  line-height: 2.0rem; /*Line height increased for better readibility*/
   font-size: 1rem;
 }
 
@@ -55,6 +55,7 @@ footer{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: #ebe4f3;  
@@ -71,7 +72,7 @@ footer{
   display: block;
   color: inherit;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   padding: 0.9rem;
   border-bottom: 2px black;
 }
@@ -154,4 +155,16 @@ form button {
 .main-nav ul li a:focus, form input:focus, form textarea:focus, button:focus, a:focus { 
   outline: 4px solid deepskyblue;
   outline-offset: 4px;
+}
+
+
+/* Desktop styles */
+@media screen and (min-width: 800px){
+  .main-nav ul {
+    flex-direction: row;
+  }
+
+  .main-nav ul li a {
+    font-size: 1.25rem;
+  }
 }
