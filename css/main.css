@@ -165,8 +165,4 @@ form button {
   .main-nav ul {
     flex-direction: row;
   }
-
-  .main-nav ul li a {
-    font-size: 2rem;
-  }
 }
