@@ -5,64 +5,110 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessible Me</title>
+  <title>Jam Box Studios</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  
+  <!-- Implemented a dyslexia-friendly font for headings. -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
-        </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
-        </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
+
+  <!-- SKIPLINK -->
+  <div>
+    <ul id="skipnav" aria-hidden="true">
+        <li>
+            <a href="#main-content" aria-label="Skip to main content">Skip to main content</a>
+        </li>
+    </ul>
   </div>
+  <!-- SKIPLINK END -->
+
+  <header> 
+
+    <h1>Jam Box Studios</h1>
+
+    <nav id="navigation" class="main-nav" aria-label="Main">
+
+      <ul id="desktop-nav">
+        <li><a href="#" aria-label="Home">Home</a></li>
+        <li><a href="#" aria-label="Buy our products">Products</a></li>
+        <li><a href="#" aria-label="Make a reservation">Reservation</a></li>
+        <li><a href="#" aria-label="Visit our studio">Studio</a></li>
+      </ul>
+
+    </nav>
+
+    <img src="https://placekitten.com/2200/900" alt="Photo of Kitten" class="banner">
+
+  </header>
+
+  <main>
+
+    <div class="container">
+
+      <div class="main-content" id="main-content">
+
+        <section class="welcome">
+          <h2>Welcome to Jam Box</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+        </section>
+
+        <section class="owner">       
+          <h3>Meet the owner</h3>
+          <ul itemscope itemtype="https://schema.org/Person" aria-label="Owner Details">
+            <li itemprop="name" aria-label="Name: John Doe">Name: John Doe</li>
+            <li itemprop="jobTitle" aria-label="Job Title: CEO">Title: CEO</li>
+            <li itemprop="email" aria-label="Email: johndoe@jambox.ca">Email: <a href="mailto:johndoe@jambox.ca" aria-label="Send us an email to this address" target="_blank">johndoe@jambox.ca</a></li>
+            <li itemprop="telephone" aria-label="Phone: 613-000-0000">Phone: <a href="tel:+1613000000" aria-label="Call us to our phone number">613-000-0000</a></li>
+          </ul>
+          <h3>Address</h3>
+          <address itemscope itemtype="https://schema.org/PostalAddress">
+            
+              Jambox Studios <br>
+              <a href="https://www.google.com/maps/search/123+Guitar+Road,+Musicville,+Danceistan+B3T+0L0/@40.7482649,-73.9954298,17z/data=!3m1!4b1?entry=ttu"
+                aria-label="Find map directions to our studio" target="_blank">
+                <span itemprop="streetAddress">123 Guitar Road,</span> 
+                <span itemprop="addressLocality">Musicville,</span>
+                <span itemprop="addressCountry">Danceistan</span>
+                <span itemprop="postalCode">B3T 0L0</span>
+              </a>
+            
+          </address>
+        </section> 
+
+        <div class="solid"></div>
+       
+        <section class="contact-section">
+          <h2>Contact Us</h2>
+          <form action="thanks.html" aria-label="Contact us using this form">
+            <label for="name">Full Name *</label>
+            <input aria-required="true" id="name" name="name" type="text" aria-label="Full Name" placeholder="Enter your Full Name" autocomplete="given-name" required oninvalid="this.setCustomValidity('Enter your full name')" oninput="this.setCustomValidity('')">
+            <label for="email">Email *</label>
+            <input aria-required="true" id="email" name="email" aria-label="Email Address" placeholder="Enter your Email Address" autocomplete="off" type="email" required oninvalid="this.setCustomValidity('Enter a valid email address, make sure to use this pattern: email@example.com')" oninput="this.setCustomValidity('')">
+            <label for="subject">Subject *</label>
+            <input aria-required="true" id="subject" name="subject" type="text" aria-label="Subject" placeholder="Enter your Subject" required oninvalid="this.setCustomValidity('Enter a subject')" oninput="this.setCustomValidity('')">
+            <label for="message">Your Message *</label>
+            <textarea aria-required="true" id="message" name="message" aria-label="Message" placeholder="Enter your Message" required oninvalid="this.setCustomValidity('Enter your message')" oninput="this.setCustomValidity('')"></textarea>
+            <span>All elements marked with * are required</span> <br>
+            <button type="submit" aria-label="Submit">Send</button>            
+          </form>
+        </section>
+
+      </div> 
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Footer">
+    &copy; 2021 Jam Box Studios | <a href="#navigation" aria-label="Back to Navigation">Back to Navigation</a>
+  </footer>
+
 </body>
 
 </html>
